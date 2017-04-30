@@ -1,12 +1,17 @@
 #include <iostream>
+#include "Queue.h"
 #include "LinkedList.h"
-
 using namespace std; 
 
 int main() {
-	LinkedList<int> myList = LinkedList<int>();
-	myList.insertBack(12);
-	cout << myList[-41];
+	Queue<int> original = Queue<int>();
+	original.insertBack(1);
+	original.insertBack(2); 
+
+	Queue<int> copy = Queue<int>();
+	copy.insertBack(21235);
+
+	copy = original; 
 
 	return 0; 
 }
